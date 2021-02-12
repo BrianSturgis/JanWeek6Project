@@ -82,11 +82,10 @@ email Brian Sturgis @ <sturujisu@gmail.com>
 ## Specs
 ```JS
 
-
-
 //make and api cal
 Test:
-expect:
+code:CurrencyConverter()
+expect:CurrencyConverter() toEqual()
 
 // get api rate in json
 Test:
@@ -95,8 +94,6 @@ expect:
 // go to ui logic
 Test:
 expect:
-
-
 
 
 ```
