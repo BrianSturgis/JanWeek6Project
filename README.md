@@ -83,12 +83,17 @@ email Brian Sturgis @ <sturujisu@gmail.com>
 ## Specs
 ```JS
 
+
+
+//make and api cal
 Test:
 expect:
 
+// get api rate in json
 Test:
 expect:
 
+// go to ui logic
 Test:
 expect:
 
