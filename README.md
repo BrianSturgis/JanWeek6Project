@@ -23,7 +23,6 @@ This application is built currently to be displayed in full screen otherwise the
 - got to repo location.
 - using git commands clone to local repo or click "download" and unpack on machine
 
-
 ## USING THIS APPLICATION
 his app uses node.js. If you do not already have node.js installed, visit https://nodejs.org/en/download/ and install.
 After installing node, navigate to the root directory of the cloned repo and type in "npm install".
