@@ -23,12 +23,8 @@ async function apiRateJPY() {
 
 $(document).ready(function () {
   let userInput = parseFloat($("#userDollar").val());
-  
-  
   $("#convert-button1").click(function () {
     event.preventDefault();
     apiRateJPY();
-    
-    
   });
 });
