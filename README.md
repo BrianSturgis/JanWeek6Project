@@ -4,21 +4,17 @@
 <p align="center"> Authored by Brian Sturgis</p>
 <p align="center">Updated on Feb 12th, 2020</p>
 
-
 ## Detailed Description
 MAKE SURE TO READ INSTRUCTIONS REGARDING PROTECTING YOUR API KEY BELOW!
 
-This is an currency exchange application that will take in a amount in U.S dollars and convert it into a foriegn currency.  To come to this solution the application will use "exchange rate API" and javascript to provide solutions.
-
-This application is built currently to be displayed in full screen otherwise the UI will not align correctly with the background artwork.
+This is an currency exchange application that will take in a amount in U.S dollars and convert it into a foriegn currency. It is a fully functioning calculator as well. To come to this solution the application will use "exchange rate API" and javascript to provide solutions.
 
 ## KNOWN BUGS
 - does not work well with chrome DARK MODE extension.
 - limited responsiveness.
 - The app needs a refresh button located on the UI.  User must use browsers refresh to reset UI fully but is not needed to use app over an over.
 
-
-## Setup/Installation Requirements
+### Setup/Installation Requirements
 
 ## GIT HUB
 - repository location (https://github.com/BrianSturgis/Janweek6project
@@ -42,9 +38,8 @@ For this application, you will need to get a secure API key of your own in order
 - go to https://www.exchangerate-api.com/
 - Type in your email address in the box where it says "Your email address" and click "Get Free Key"
 - The prompt will take you to a dashboard that will show you your API Key.
-- Copy and Paste into clipboard 
+- Copy and Paste into clipboard
 - and follow in the instructions below under "How to set up .env file" or see instructions below.
-
 
 ## Setup Instructions for API Keys
 For this application, you will need to get a secure API key of your own in order for the application to run properly. Please carefully follow along with the instructions below to get your own API key securely.
@@ -75,12 +70,11 @@ Once complete the API key you acquired in the 'API Key and Using an .env File' s
 
 ## Stretch goals
 - improved button design
-- improved and animated user interface
+- animated user interface
 - more currencies
 
 ## Support and contact details
 email Brian Sturgis @ <sturujisu@gmail.com>
-
 
 ## Specs
 ```JS
@@ -89,11 +83,9 @@ Test: "grab json using api for US conversion rates"
 code:CurrencyConverter()
 expect:CurrencyConverter() toEqual()
 
-
 Test:"creates response variable and calls convert function"
 code:apiRate();
 expect:expect(response).toEqual(response.conversion_rates."selected currency" * Math.round)
-
 
 Test:"multiplys inputtedDollar * json rate"
 code:convert();
@@ -113,7 +105,6 @@ expect:expect(inputtedDollar).toEqual(0);
 * lint
 * webpack
 
-
 ### License
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -121,7 +112,5 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE..
-
-
 
 Copyright (c) 2020 **Brian Micheal Sturgis**
