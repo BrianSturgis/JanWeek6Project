@@ -33,7 +33,6 @@ input {
   text-align: right;
   border: none;
   border-radius: 30px;
-  
 }
 
 .keys {
@@ -53,14 +52,15 @@ button {
   cursor: pointer;
   background: e9e9e9;
 }
+
 .note {
   background: aqua;
 }
+
 .error {
   background: aqua;
 }
 
 .header{
   background: aqua;
-  
 }

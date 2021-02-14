@@ -1,4 +1,3 @@
-/* eslint-disable */
 export default class CurrencyConverter {
   static async getUSD(){
     try {
