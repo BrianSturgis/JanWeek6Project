@@ -15,6 +15,7 @@ This application is built currently to be displayed in full screen otherwise the
 ## KNOWN BUGS
 - does not work well with chrome DARK MODE extension.
 - limited responsiveness.
+- The app needs a refresh button located on the UI.  User must use browsers refresh to reset UI fully but is not needed to use app over an over.
 
 
 ## Setup/Installation Requirements

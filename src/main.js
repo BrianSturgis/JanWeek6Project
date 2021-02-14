@@ -4,7 +4,7 @@ import 'bootstrap';
 import './css/styles.css';
 import CurrencyConverter from './js/apiscript.js';
 
-//api button logic
+//api  click function logic
 $(".yenRate").click(function () {
   apiRateJPY();
 });
@@ -13,46 +13,134 @@ $(".pesoRate").click(function () {
   apiRateMXN();
 });
 
+$(".euroRate").click(function () {
+  apiRateEUR();
+});
 
+$(".canRate").click(function () {
+  apiRateCAD();
+});
 
+$(".ausRate").click(function () {
+  apiRateAUD();
+});
+
+$(".ukRate").click(function () {
+  apiRateGBP();
+});
+
+$(".hkRate").click(function () {
+  apiRateHKD();
+});
+
+$(".marsRate").click(function () {
+  apiRateMRS();
+});
 
 
 function convertJPY(response) {
   let inputtedDollar = parseFloat($(".field").val());
   console.log(inputtedDollar);
-  if (response.conversion_rates){
-    $(".note").html(` ${response.conversion_rates.JPY * Math.round(inputtedDollar)} YEN.`);
+  if (isNaN(response.conversion_rates.JPY)){
+    $(".note").html(`currency not avail API call: ${response.result}`);
   } else {
-    $(".error").html(`api error message: ${response['error-type']}`);
-    $(".error").html(`API response: ${response}`);
+    $(".note").html(` ${response.conversion_rates.JPY * Math.round(inputtedDollar)} Yen.`);
   }
 }
+function convertMXN(response) {
+  let inputtedDollar = parseFloat($(".field").val());
+  if (isNaN(response.conversion_rates.MXN)){
+    $(".note").html(`currency not avail API call: ${response.result}`);
+  } else {
+    $(".note").html(` ${response.conversion_rates.MXN * Math.round(inputtedDollar)} Pesos.`);
+  }
+}
+function convertEUR(response) {
+  let inputtedDollar = parseFloat($(".field").val());
+  if (isNaN(response.conversion_rates.EUR)){
+    $(".note").html(`currency not avail API call: ${response.result}`);
+  } else {
+    $(".note").html(` ${response.conversion_rates.EUR * Math.round(inputtedDollar)} Euros.`);
+  }
+}
+function convertCAD(response) {
+  let inputtedDollar = parseFloat($(".field").val());
+  if (isNaN(response.conversion_rates.CAD)){
+    $(".note").html(`currency not avail API call: ${response.result}`);
+  } else {
+    $(".note").html(` ${response.conversion_rates.CAD * Math.round(inputtedDollar)} Canadian Dollars.`);
+  }
+}
+function convertAUD(response) {
+  let inputtedDollar = parseFloat($(".field").val());
+  if (isNaN(response.conversion_rates.AUD)){
+    $(".note").html(`currency not avail API call: ${response.result}`);
+  } else {
+    $(".note").html(` ${response.conversion_rates.AUD * Math.round(inputtedDollar)} Aussie Dollars.`);
+  }
+}
+function convertGBP(response) {
+  let inputtedDollar = parseFloat($(".field").val());
+  if (isNaN(response.conversion_rates.GBP)){
+    $(".note").html(`currency not avail API call: ${response.result}`);
+  } else {
+    $(".note").html(` ${response.conversion_rates.GBP * Math.round(inputtedDollar)} Pounds.`);
+  }
+}
+function convertHKD(response) {
+  let inputtedDollar = parseFloat($(".field").val());
+  if (isNaN(response.conversion_rates.GBP)){
+    $(".note").html(`currency not avail API call: ${response.result}`);
+  } else {
+    $(".note").html(` ${response.conversion_rates.HKD * Math.round(inputtedDollar)} Hong Kong Dollars.`);
+  }
+}
+function convertMRS(response) {
+  let inputtedDollar = parseFloat($(".field").val());
+  if (isNaN(response.conversion_rates.MRS)){
+    $(".note").html(`currency not avail API call: ${response.result}`);
+  } else {
+    $(".note").html(` ${response.conversion_rates.MRS * Math.round(inputtedDollar)} Mars Dollars.`);
+  }
+}
+
+
+
+
+
+
 async function apiRateJPY() {
   const response = await CurrencyConverter.getUSD();
   convertJPY(response);
-}
-
-
-function convertMXN(response) {
-  let inputtedDollar = parseFloat($(".field").val());
-  console.log(inputtedDollar);
-  if (response.conversion_rates){
-    $(".note").html(` ${response.conversion_rates.MXN* Math.round(inputtedDollar)} PESOS.`);
-  } else {
-    $(".note").html(`api error message: ${response['error-type']}`);
-    $(".note").html(`API response: ${response}`);
-  }
 }
 async function apiRateMXN() {
   const response = await CurrencyConverter.getUSD();
   convertMXN(response);
 }
-
-
-
-
-
-
+async function apiRateEUR() {
+  const response = await CurrencyConverter.getUSD();
+  convertEUR(response);
+}
+async function apiRateCAD() {
+  const response = await CurrencyConverter.getUSD();
+  convertCAD(response);
+}
+async function apiRateAUD() {
+  const response = await CurrencyConverter.getUSD();
+  convertAUD(response);
+}
+async function apiRateGBP() {
+  const response = await CurrencyConverter.getUSD();
+  convertGBP(response);
+}
+async function apiRateHKD() {
+  const response = await CurrencyConverter.getUSD();
+  convertHKD(response);
+}
+async function apiRateMRS() {
+  const response = await CurrencyConverter.getUSD();
+  convertMRS(response);
+}
 
 // calculator logic
 const $input = document.querySelector("input");
