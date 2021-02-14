@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://github.com/BrianSturgis.png" width="200px" height="auto" >
+<img src="" width="200px" height="auto" >
 </div>
 <p align="center"> Authored by Brian Sturgis</p>
 <p align="center">Updated on Feb 12th, 2020</p>
@@ -7,10 +7,12 @@
 ## Detailed Description
 MAKE SURE TO READ INSTRUCTIONS REGARDING PROTECTING YOUR API KEY BELOW!
 
-This is an currency exchange application that will take in a amount in U.S dollars and convert it into a foriegn currency. It is a fully functioning calculator as well. To come to this solution the application will use "exchange rate API" and javascript to provide solutions.
+This is an currency exchange application that will take in a amount in U.S dollars and convert it into a foriegn currency. It is a fully functioning calculator as well. 
+
+To come to this solution the application will use "exchange rate API" and javascript to provide solutions.  SEE INSTRUCTIONS FOR USAGE BELOW.
 
 ## KNOWN BUGS
-- does not work well with chrome DARK MODE extension.
+- does not work well with chrome DARK MODE extension.  DARK MODE BUTTON NOT WORKING.
 - limited responsiveness.
 - The app needs a refresh button located on the UI.  User must use browsers refresh to reset UI fully but is not needed to use app over an over.
 
