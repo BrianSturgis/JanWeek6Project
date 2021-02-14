@@ -5,13 +5,13 @@ import './css/styles.css';
 import CurrencyConverter from './js/apiscript.js';
 
 //api button logic
-  $(".yenRate").click(function () {
-    apiRateJPY();
-  });
+$(".yenRate").click(function () {
+  apiRateJPY();
+});
 
-  $(".pesoRate").click(function () {
-    apiRateMXN();
-  });
+$(".pesoRate").click(function () {
+  apiRateMXN();
+});
 
 
 

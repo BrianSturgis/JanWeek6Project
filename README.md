@@ -13,6 +13,8 @@ This is an currency exchange application that will take in a amount in U.S dolla
 This application is built currently to be displayed in full screen otherwise the UI will not align correctly with the background artwork.
 
 ## KNOWN BUGS
+- does not work well with chrome DARK MODE extension.
+- limited responsiveness.
 
 
 ## Setup/Installation Requirements
@@ -82,18 +84,19 @@ email Brian Sturgis @ <sturujisu@gmail.com>
 ## Specs
 ```JS
 
-//make and api cal
-Test:
+Test: "grab json using api for US conversion rates"
 code:CurrencyConverter()
 expect:CurrencyConverter() toEqual()
 
-// get api rate in json
-Test:
-expect:
 
-// go to ui logic
-Test:
-expect:
+Test:"creates response variable and calls convert function"
+code:apiRate();
+expect:expect(response).toEqual(response.conversion_rates."selected currency" * Math.round)
+
+
+Test:"multiplys inputtedDollar * json rate"
+code:convert();
+expect:expect(inputtedDollar).toEqual(0);
 
 ```
 
