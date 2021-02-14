@@ -4,6 +4,8 @@ import 'bootstrap';
 import './css/styles.css';
 import CurrencyConverter from './js/apiscript.js';
 
+
+
 function getRateJPY(response) {
   let answer = parseFloat($("#userDollar").val());
   if (response.conversion_rates){
@@ -18,6 +20,14 @@ async function apiRateJPY() {
   const response = await CurrencyConverter.getUSD();
   getRateJPY(response);
 }
+
+
+
+
+
+
+
+
 
 const $input = document.querySelector("input");
 
@@ -99,12 +109,12 @@ document.querySelector(".op__key[op=clear]").onclick =
 
 document.querySelector(".op__key[op=negate]").onclick =
   () => $input.value = -parseFloat($input.value);
-  console.log($input.value);
-
+  $input.value
 
 
 $(document).ready(function () {
-  let userInput = parseFloat($("#userDollar").val());
+  let userInput = parseFloat($($input.value).val());
+  console.log(userInput);
   $("#convert-button1").click(function () {
     event.preventDefault();
     apiRateJPY();
