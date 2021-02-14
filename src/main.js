@@ -6,19 +6,20 @@ import CurrencyConverter from './js/apiscript.js';
 
 
 
-function getRateJPY(response) {
-  let answer = parseFloat($("#userDollar").val());
+function convertJPY(response) {
+  let inputtedDollar = parseFloat($(".field").val());
+  console.log(inputtedDollar);
   if (response.conversion_rates){
-    $(".output").html(`The exchange rate from USD is ${response.conversion_rates.JPY * Math.round(answer)} YEN.`);
+    $(".note").html(` ${response.conversion_rates.JPY * Math.round(inputtedDollar)} YEN.`);
   } else {
-    $(".outputError").html(`api error message: ${response['error-type']}`);
-    $(".output").html(`API response: ${response}`);
+    $($input.value).html(`api error message: ${response['error-type']}`);
+    $($input.value).html(`API response: ${response}`);
   }
 }
 
 async function apiRateJPY() {
   const response = await CurrencyConverter.getUSD();
-  getRateJPY(response);
+  convertJPY(response);
 }
 
 
@@ -112,11 +113,10 @@ document.querySelector(".op__key[op=negate]").onclick =
   $input.value
 
 
-$(document).ready(function () {
-  let userInput = parseFloat($($input.value).val());
-  console.log(userInput);
-  $("#convert-button1").click(function () {
-    event.preventDefault();
+
+  
+  
+  $(".yenRate").click(function () {
     apiRateJPY();
   });
-});
+
