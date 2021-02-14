@@ -4,6 +4,18 @@ import 'bootstrap';
 import './css/styles.css';
 import CurrencyConverter from './js/apiscript.js';
 
+//api button logic
+  $(".yenRate").click(function () {
+    apiRateJPY();
+  });
+
+  $(".pesoRate").click(function () {
+    apiRateMXN();
+  });
+
+
+
+
 
 function convertJPY(response) {
   let inputtedDollar = parseFloat($(".field").val());
@@ -11,14 +23,37 @@ function convertJPY(response) {
   if (response.conversion_rates){
     $(".note").html(` ${response.conversion_rates.JPY * Math.round(inputtedDollar)} YEN.`);
   } else {
-    $(".note").html(`api error message: ${response['error-type']}`);
-    $(".note").html(`API response: ${response}`);
+    $(".error").html(`api error message: ${response['error-type']}`);
+    $(".error").html(`API response: ${response}`);
   }
 }
 async function apiRateJPY() {
   const response = await CurrencyConverter.getUSD();
   convertJPY(response);
 }
+
+
+function convertMXN(response) {
+  let inputtedDollar = parseFloat($(".field").val());
+  console.log(inputtedDollar);
+  if (response.conversion_rates){
+    $(".note").html(` ${response.conversion_rates.MXN* Math.round(inputtedDollar)} PESOS.`);
+  } else {
+    $(".note").html(`api error message: ${response['error-type']}`);
+    $(".note").html(`API response: ${response}`);
+  }
+}
+async function apiRateMXN() {
+  const response = await CurrencyConverter.getUSD();
+  convertMXN(response);
+}
+
+
+
+
+
+
+
 // calculator logic
 const $input = document.querySelector("input");
 document.querySelectorAll(".num__key").forEach(
@@ -89,8 +124,3 @@ document.querySelector(".op__key[op=clear]").onclick =
 document.querySelector(".op__key[op=negate]").onclick =
   () => $input.value = -parseFloat($input.value);
   $input.value
-  
-//api logic
-  $(".yenRate").click(function () {
-    apiRateJPY();
-  });
