@@ -35,7 +35,6 @@ If you use Jest to run your tests, open your terminal and go to the root of the 
 If you would like to run the program through the server, you can type "npm run start" which will build the program and launch the preview to the local server.
 
 ## API IN
-
 For this application, you will need to get a secure API key of your own in order for the application to run properly. Please carefully follow along with the instructions below to get your own API key securely.
 - go to https://www.exchangerate-api.com/
 - Type in your email address in the box where it says "Your email address" and click "Get Free Key"
@@ -108,7 +107,6 @@ expect:expect(inputtedDollar).toEqual(0);
 * webpack
 
 ### License
-
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
