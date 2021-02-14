@@ -3,7 +3,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import './css/styles.css';
 import CurrencyConverter from './js/apiscript.js';
-
+// user logic
 //api  click function logic
 $(".yenRate").click(function () {
   apiRateJPY();
@@ -36,8 +36,7 @@ $(".hkRate").click(function () {
 $(".marsRate").click(function () {
   apiRateMRS();
 });
-
-
+// conversion math
 function convertJPY(response) {
   let inputtedDollar = parseFloat($(".field").val());
   console.log(inputtedDollar);
@@ -103,12 +102,7 @@ function convertMRS(response) {
     $(".note").html(` ${response.conversion_rates.MRS * Math.round(inputtedDollar)} Mars Dollars.`);
   }
 }
-
-
-
-
-
-
+// pulling the JSON into a variable
 async function apiRateJPY() {
   const response = await CurrencyConverter.getUSD();
   convertJPY(response);
@@ -141,7 +135,6 @@ async function apiRateMRS() {
   const response = await CurrencyConverter.getUSD();
   convertMRS(response);
 }
-
 // calculator logic
 const $input = document.querySelector("input");
 document.querySelectorAll(".num__key").forEach(
