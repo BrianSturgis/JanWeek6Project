@@ -13,8 +13,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
+
 main {
   background: aqua;
   padding: 2rem;
@@ -24,7 +24,6 @@ main {
 input, button {
   outline: none;
 }
-
 
 input {
   background: rgb(31, 152, 136);
