@@ -77,7 +77,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "https://github.com/BrianSturgis/JanWeek6Project/";
+/******/ 	__webpack_require__.p = "/JanWeek6Project/";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
