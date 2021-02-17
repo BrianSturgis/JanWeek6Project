@@ -3,7 +3,7 @@ import 'bootstrap';
 import './css/styles.css';
 import CurrencyConverter from './js/apiscript.js';
 // user logic
-//api  click function logic
+//api  click function log
 $(".yenRate").click(function () {
   apiRateJPY();
 });
@@ -33,7 +33,8 @@ function convertJPY(response) {
   let inputtedDollar = parseFloat($(".field").val());
   console.log(inputtedDollar);
   if (isNaN(response.conversion_rates.JPY)){
-    $(".note").html(`currency not avail API call: ${response.result}`);
+    $(".note").hide();
+    $(".error").html(`currency not avail API call: ${response.result}`);
   } else {
     $(".note").html(` ${response.conversion_rates.JPY * Math.round(inputtedDollar)} Yen.`);
   }
@@ -41,7 +42,8 @@ function convertJPY(response) {
 function convertMXN(response) {
   let inputtedDollar = parseFloat($(".field").val());
   if (isNaN(response.conversion_rates.MXN)){
-    $(".note").html(`currency not avail API call: ${response.result}`);
+    $(".note").hide();
+    $(".error").html(`currency not avail API call: ${response.result}`);
   } else {
     $(".note").html(` ${response.conversion_rates.MXN * Math.round(inputtedDollar)} Pesos.`);
   }
@@ -49,7 +51,8 @@ function convertMXN(response) {
 function convertEUR(response) {
   let inputtedDollar = parseFloat($(".field").val());
   if (isNaN(response.conversion_rates.EUR)){
-    $(".note").html(`currency not avail API call: ${response.result}`);
+    $(".note").hide();
+    $(".error").html(`currency not avail API call: ${response.result}`);
   } else {
     $(".note").html(` ${response.conversion_rates.EUR * Math.round(inputtedDollar)} Euros.`);
   }
@@ -57,7 +60,8 @@ function convertEUR(response) {
 function convertCAD(response) {
   let inputtedDollar = parseFloat($(".field").val());
   if (isNaN(response.conversion_rates.CAD)){
-    $(".note").html(`currency not avail API call: ${response.result}`);
+    $(".note").hide();
+    $(".error").html(`currency not avail API call: ${response.result}`);
   } else {
     $(".note").html(` ${response.conversion_rates.CAD * Math.round(inputtedDollar)} Canadian Dollars.`);
   }
@@ -65,7 +69,8 @@ function convertCAD(response) {
 function convertAUD(response) {
   let inputtedDollar = parseFloat($(".field").val());
   if (isNaN(response.conversion_rates.AUD)){
-    $(".note").html(`currency not avail API call: ${response.result}`);
+    $(".note").hide();
+    $(".error").html(`currency not avail API call: ${response.result}`);
   } else {
     $(".note").html(` ${response.conversion_rates.AUD * Math.round(inputtedDollar)} Aussie Dollars.`);
   }
@@ -73,7 +78,8 @@ function convertAUD(response) {
 function convertGBP(response) {
   let inputtedDollar = parseFloat($(".field").val());
   if (isNaN(response.conversion_rates.GBP)){
-    $(".note").html(`currency not avail API call: ${response.result}`);
+    $(".note").hide();
+    $(".error").html(`currency not avail API call: ${response.result}`);
   } else {
     $(".note").html(` ${response.conversion_rates.GBP * Math.round(inputtedDollar)} Pounds.`);
   }
@@ -81,7 +87,8 @@ function convertGBP(response) {
 function convertHKD(response) {
   let inputtedDollar = parseFloat($(".field").val());
   if (isNaN(response.conversion_rates.HKD)){
-    $(".note").html(`currency not avail API call: ${response.result}`);
+    $(".note").hide();
+    $(".error").html(`currency not avail API call: ${response.result}`);
   } else {
     $(".note").html(` ${response.conversion_rates.HKD * Math.round(inputtedDollar)} Hong Kong Dollars.`);
   }
@@ -89,12 +96,13 @@ function convertHKD(response) {
 function convertMRS(response) {
   let inputtedDollar = parseFloat($(".field").val());
   if (isNaN(response.conversion_rates.MRS)){
-    $(".note").html(`currency not avail API call: ${response.result}`);
+    $(".note").hide();
+    $(".error").html(`currency not avail.   API call: ${response.result}`);
   } else {
     $(".note").html(` ${response.conversion_rates.MRS * Math.round(inputtedDollar)} Mars Dollars.`);
   }
 }
-// pulling the JSON into a variable
+//
 async function apiRateJPY() {
   const response = await CurrencyConverter.getUSD();
   convertJPY(response);
