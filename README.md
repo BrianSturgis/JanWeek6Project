@@ -1,12 +1,6 @@
-<div align="center">
-<img src="" width="200px" height="auto" >
-</div>
-<p align="center"> Authored by Brian Sturgis</p>
-<p align="center">Updated on Feb 12th, 2020</p>
-
-
-[website](src/index.html)_
-
+### CURRENCY CONVERTOR
+<p align="left"> Authored by Brian Sturgis</p>
+<p align="left">Updated on Feb 12th, 2020</p>
 
 
 ## Detailed Description
@@ -20,21 +14,12 @@ To come to this solution the application will use "exchange rate API" and javasc
 - does not work well with chrome DARK MODE extension.  DARK MODE BUTTON NOT WORKING.
 - limited responsiveness.
 - The app needs a refresh button located on the UI.  User must use browsers refresh to reset UI fully but is not needed to use app over an over.
-```JS
-- Known ES-Lint errors found.
-C:\Users\Owner\Desktop\EPICODUS\Projects\JanWeek6Project\src\main.js
-  166:5  error  Unreachable code  no-unreachable
-  169:5  error  Unreachable code  no-unreachable
-  172:5  error  Unreachable code  no-unreachable
-  175:5  error  Unreachable code  no-unreachable
-
-```
 
 ### Setup/Installation Requirements
 
 ## GIT HUB
 - repository location (https://github.com/BrianSturgis/Janweek6project
-- open through a git termianl or clone editor.
+- open through a git terminal or clone editor.
 - got to repo location.
 - using git commands clone to local repo or click "download" and unpack on machine
 

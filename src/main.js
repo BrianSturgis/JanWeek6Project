@@ -34,7 +34,7 @@ function convertJPY(response) {
   console.log(inputtedDollar);
   if (isNaN(response.conversion_rates.JPY)){
     $(".note").hide();
-    $(".error").html(`currency not avail API call: ${response.result}`);
+    $(".error").html(`currency not avail API call: ${response.error_type}`);
   } else {
     $(".note").html(` ${response.conversion_rates.JPY * Math.round(inputtedDollar)} Yen.`);
   }
@@ -43,7 +43,7 @@ function convertMXN(response) {
   let inputtedDollar = parseFloat($(".field").val());
   if (isNaN(response.conversion_rates.MXN)){
     $(".note").hide();
-    $(".error").html(`currency not avail API call: ${response.result}`);
+    $(".error").html(`currency not avail API call: ${response.error_type}`);
   } else {
     $(".note").html(` ${response.conversion_rates.MXN * Math.round(inputtedDollar)} Pesos.`);
   }
@@ -52,7 +52,7 @@ function convertEUR(response) {
   let inputtedDollar = parseFloat($(".field").val());
   if (isNaN(response.conversion_rates.EUR)){
     $(".note").hide();
-    $(".error").html(`currency not avail API call: ${response.result}`);
+    $(".error").html(`currency not avail API call: ${response.error_type}`);
   } else {
     $(".note").html(` ${response.conversion_rates.EUR * Math.round(inputtedDollar)} Euros.`);
   }
@@ -61,7 +61,7 @@ function convertCAD(response) {
   let inputtedDollar = parseFloat($(".field").val());
   if (isNaN(response.conversion_rates.CAD)){
     $(".note").hide();
-    $(".error").html(`currency not avail API call: ${response.result}`);
+    $(".error").html(`currency not avail API call: ${response.error_type}`);
   } else {
     $(".note").html(` ${response.conversion_rates.CAD * Math.round(inputtedDollar)} Canadian Dollars.`);
   }
@@ -70,7 +70,7 @@ function convertAUD(response) {
   let inputtedDollar = parseFloat($(".field").val());
   if (isNaN(response.conversion_rates.AUD)){
     $(".note").hide();
-    $(".error").html(`currency not avail API call: ${response.result}`);
+    $(".error").html(`currency not avail API call: ${response.error_type}`);
   } else {
     $(".note").html(` ${response.conversion_rates.AUD * Math.round(inputtedDollar)} Aussie Dollars.`);
   }
@@ -79,7 +79,7 @@ function convertGBP(response) {
   let inputtedDollar = parseFloat($(".field").val());
   if (isNaN(response.conversion_rates.GBP)){
     $(".note").hide();
-    $(".error").html(`currency not avail API call: ${response.result}`);
+    $(".error").html(`currency not avail API call: ${response.error_type}`);
   } else {
     $(".note").html(` ${response.conversion_rates.GBP * Math.round(inputtedDollar)} Pounds.`);
   }
@@ -88,7 +88,7 @@ function convertHKD(response) {
   let inputtedDollar = parseFloat($(".field").val());
   if (isNaN(response.conversion_rates.HKD)){
     $(".note").hide();
-    $(".error").html(`currency not avail API call: ${response.result}`);
+    $(".error").html(`currency not avail API call: ${response.error_type}`);
   } else {
     $(".note").html(` ${response.conversion_rates.HKD * Math.round(inputtedDollar)} Hong Kong Dollars.`);
   }
@@ -97,7 +97,7 @@ function convertMRS(response) {
   let inputtedDollar = parseFloat($(".field").val());
   if (isNaN(response.conversion_rates.MRS)){
     $(".note").hide();
-    $(".error").html(`currency not avail.   API call: ${response.result}`);
+    $(".error").html(`currency not avail.   API call: ${response.error_type}`);
   } else {
     $(".note").html(` ${response.conversion_rates.MRS * Math.round(inputtedDollar)} Mars Dollars.`);
   }
