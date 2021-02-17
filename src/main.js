@@ -80,7 +80,7 @@ function convertGBP(response) {
 }
 function convertHKD(response) {
   let inputtedDollar = parseFloat($(".field").val());
-  if (isNaN(response.conversion_rates.GBP)){
+  if (isNaN(response.conversion_rates.HKD)){
     $(".note").html(`currency not avail API call: ${response.result}`);
   } else {
     $(".note").html(` ${response.conversion_rates.HKD * Math.round(inputtedDollar)} Hong Kong Dollars.`);
@@ -163,16 +163,12 @@ const evaluate = buffer => {
   switch (operator) {
   case "add":
     return firstOperand + secondOperand;
-    break;
   case "subtract":
     return firstOperand - secondOperand;
-    break;
   case "multiply":
     return firstOperand * secondOperand;
-    break;
   case "divide":
     return firstOperand / secondOperand;
-    break;
   default:
     return secondOperand;
   }
