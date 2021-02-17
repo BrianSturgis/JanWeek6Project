@@ -18,7 +18,7 @@ To come to this solution the application will use "exchange rate API" and javasc
 ### Setup/Installation Requirements
 
 ## GIT HUB
-- the MARS at the bottom of the interface is meant to call a currency that does not exist and is meant to demonstrate that.
+- the MARS button at the bottom of the interface is meant to call a currency that does not exist and is meant to demonstrate that.
 - repository location (https://github.com/BrianSturgis/Janweek6project
 - open through a git terminal or clone editor.
 - got to repo location.
